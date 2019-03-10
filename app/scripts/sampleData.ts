@@ -7,6 +7,7 @@ async function addRandomContacts(amount: number) {
     job: `${faker.name.jobTitle()} ${faker.random.word()} ${faker.name.jobType()}`,
     isMale: faker.random.boolean(),
     age: Math.floor(Math.random() * 100),
+    lockUntil: null,
   });
 
   if (amount) {

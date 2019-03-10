@@ -3,4 +3,5 @@ export interface IContact {
   job: string;
   isMale: boolean;
   age: number;
+  lockUntil: Date;
 }

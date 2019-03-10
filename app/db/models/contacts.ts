@@ -12,6 +12,7 @@ export const ContactSchema: Schema = new Schema({
   job: String,
   isMale: Boolean,
   age: Number,
+  lockUntil: Date,
 });
 
 export const Contact: Model<ContactModel> = connection.model<ContactModel>(

@@ -18,3 +18,10 @@ export function makeDatabaseError(error: MongooseError, collectionName: string) 
   databaseError.description = `collection: ${collectionName}`;
   return databaseError;
 }
+
+export function makeResourceConflictError(resource: string) {
+  const databaseError:IServerError = new Error('resource conflict');
+  databaseError.statusCode = 409;
+  databaseError.description = `resource: ${resource}`;
+  return databaseError;
+}

@@ -1,8 +1,11 @@
 import mongoose from 'mongoose';
 import { MONGO_URL } from '../config';
+import * as logger from '../lib/logger';
 
-console.log(`connecting to MONGO_URL: ${MONGO_URL}`);
-mongoose.connect(MONGO_URL, { useNewUrlParser: true })
-  .then(() => console.log(`connected to MONGO_URL: ${MONGO_URL}`));
+logger.info(`connecting to MONGO_URL: ${MONGO_URL}`);
+mongoose.connect(MONGO_URL, {
+  useNewUrlParser: true,
+  autoReconnect: true,
+}).then(() => logger.info(`connected to MONGO_URL: ${MONGO_URL}`));
 
 export default mongoose;
