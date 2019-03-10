@@ -14,7 +14,17 @@ transpile .ts files to .js
 npm run build
 ```
 
-start the application
+start the built node application
 ```
 node .
+```
+
+start the application with docker
+```
+npm run start:local
+```
+
+seed random data for an application running locally in docker
+```
+npm run seed:local
 ```
