@@ -10,7 +10,7 @@ services:
       - 3456:3456
     command: node .
     environment:
-      DEBUG:
+      LOG_LVL: DEBUG
     depends_on:
       - mongo
   mongo:
