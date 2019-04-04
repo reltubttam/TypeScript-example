@@ -1,5 +1,5 @@
 export interface IContact {
-  firstName: string;
+  name: string;
   job: string;
   isMale: boolean;
   age: number;

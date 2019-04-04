@@ -3,7 +3,7 @@ import faker from 'faker';
 
 async function addRandomContacts(amount: number) {
   await Contact.create({
-    firstName: `${faker.name.prefix()} ${faker.name.firstName()} ${faker.name.lastName()}`,
+    name: `${faker.name.prefix()} ${faker.name.firstName()} ${faker.name.lastName()}`,
     job: `${faker.name.jobTitle()} ${faker.random.word()} ${faker.name.jobType()}`,
     isMale: faker.random.boolean(),
     age: Math.floor(Math.random() * 100),

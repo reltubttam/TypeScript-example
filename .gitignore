@@ -3,8 +3,7 @@ node_modules
 coverage
 .env
 .vscode
-qrExamples.*
 .idea
 *.pem
 *.crt
-*.js
+app/**/*.js

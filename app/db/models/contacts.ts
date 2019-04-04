@@ -3,12 +3,11 @@ import connection from '../connection';
 import { IContact } from '../../types/models';
 import { CONTACT_COLLECTION_NAME } from '../../constants';
 
-export interface ContactModel extends IContact, Document {
-  fullName(): string;
-}
+export interface ContactModel extends IContact, Document {}
 
 export const ContactSchema: Schema = new Schema({
-  firstName: String,
+  name: String,
+  lastName: String,
   job: String,
   isMale: Boolean,
   age: Number,
